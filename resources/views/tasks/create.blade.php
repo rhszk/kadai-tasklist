@@ -6,18 +6,40 @@
 
     {!! Form::model($task, ['route' => 'tasks.store']) !!}
 
-        {!! Form::label('content', 'タスク:') !!}
-        {!! Form::text('content') !!}
-		<br>
-        {!! Form::label('status', 'ステータス:') !!}
-        高{!! Form::radio('status', '高') !!}
-        中{!! Form::radio('status', '中', true) !!}
-        低{!! Form::radio('status', '低') !!}
-		<br>
-        {!! Form::submit('投稿') !!}
+<div class="row">
+	<div class="col-lg-offset-3 col-lg-6 col-sm-offset-2 col-sm-8 col-xs-12">
+
+	<div class="form-group">
+        {!! Form::label('content', 'タスク') !!}
+        {!! Form::text('content', null, ['class' => 'form-control']) !!}
+	</div>
+	<div>
+        {!! Form::label('status', 'ステータス') !!}
+		<div class="form-group">
+ 			{!! Form::label('status','高') !!}
+			{!! Form::radio('status', '高') !!}
+ 			{!! Form::label('status','中') !!}
+        	{!! Form::radio('status', '中', true) !!}
+ 			{!! Form::label('status','低') !!}
+        	{!! Form::radio('status', '低') !!}
+		</div>
+	</div>
+	<div>
+        {!! Form::label('status', '進捗') !!}
+		<div class="form-group">
+ 			{!! Form::label('progress','未完了') !!}
+ 			{!! Form::radio('progress','未完了', true) !!}
+ 			{!! Form::label('progress','進行中') !!}
+			{!! Form::radio('progress', '進行中') !!}
+ 			{!! Form::label('progress','完了') !!}
+ 			{!! Form::radio('progress','完了') !!}
+		</div>
+	</div>
+
+        {!! Form::submit('作成', ['class' => 'btn btn-default']) !!}
 
     {!! Form::close() !!}
 
-	{!! link_to_route('tasks.index', '一覧へ') !!}
-
+	</div>
+</div>
 @endsection
