@@ -49,12 +49,14 @@ class TasksController extends Controller
     {
 
 		$this->validate($request, [
+            'name' => 'required|max:255',
             'progress' => 'required|max:10',
             'status' => 'required|max:10',
             'content' => 'required|max:255',
         ]);
 
 		$task = new Task;
+        $task->name = $request->name;
         $task->progress = $request->progress;
         $task->status = $request->status;
         $task->content = $request->content;
@@ -104,12 +106,14 @@ class TasksController extends Controller
     {
 
 		$this->validate($request, [
+            'name' => 'required|max:255',
             'progress' => 'required|max:10',
             'status' => 'required|max:10',
             'content' => 'required|max:255',
         ]);
 
 		$task = Task::find($id);
+		$task->name = $request->name;
 		$task->progress = $request->progress;
 		$task->status = $request->status;
         $task->content = $request->content;

@@ -12,6 +12,7 @@
 					<th>ステータス</th>
 					<th>進捗</th>
 					<th>タスク</th>
+					<th>匿名</th>
 					<th>作成日</th>
 					<th>更新日</th>
 				</tr>
@@ -29,6 +30,7 @@
 					<td>{{ $task->status }}</td>
 					<td>{{ $task->progress }}</td>
 					<td>{{ $task->content }}</td>
+					<td>{{ $task->name }}</td>
 					<td>{{ $c_date }}</td>
 					<td>{{ $u_date }}</td>
 				</tr>

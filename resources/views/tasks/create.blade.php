@@ -13,6 +13,9 @@
         {!! Form::label('content', 'タスク') !!}
         {!! Form::text('content', null, ['class' => 'form-control']) !!}
 	</div>
+	<div class="form-group">
+        {!! Form::label('content', '匿名') !!}
+        {!! Form::text('name', null, ['class' => 'form-control']) !!}
 	<div>
         {!! Form::label('status', 'ステータス') !!}
 		<div class="form-group">

@@ -18,6 +18,10 @@
     		<td>{{ $task->content }}</td>
 		</tr>
 		<tr>
+			<th>匿名</th>
+    		<td>{{ $task->name }}</td>
+		</tr>
+		<tr>
 			<th>進捗</th>
     		<td>{{ $task->progress }}</td>
 		</tr>

@@ -1,0 +1,11 @@
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'App' at line 1
+mysql> App\Tas::all()
+Currently logging to file 'all();'
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'App' at line 1
+mysql> App\Task::all()
+Currently logging to file 'all();'
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'App' at line 1
+mysql> exit
